@@ -4,6 +4,7 @@ import connectMongoDB from "./config/db.js";
 import mysqlPool from "./config/mysql.js";
 import { swaggerUi, swaggerSpec } from "./config/swagger.js";
 import userRoutes from "./routes/UserRoutes.js";
+import productRoutes from "./routes/ProductRoutes.js"
 
 // Load environment variables
 dotenv.config();
@@ -36,6 +37,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Routes
 app.use("/api", userRoutes);
+app.use("/api", productRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;

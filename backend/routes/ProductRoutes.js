@@ -1,42 +1,42 @@
 import express from "express";
-import { fetchUsers, fetchUserById, addUser, updateUserById, deleteUserById } from "../controllers/UserController.js";
+import { fetchProducts, fetchProductById, addProduct, updateProductDetails, removeProduct } from "../controllers/ProductController.js";
 
 const router = express.Router();
 
 /**
  * @swagger
- * /api/users:
+ * /api/products:
  *   get:
- *     summary: Get all users
+ *     summary: Get all products
  *     responses:
  *       200:
- *         description: A list of users
+ *         description: A list of products
  */
-router.get("/users", fetchUsers);
+router.get("/products", fetchProducts);
 
 /**
  * @swagger
- * /api/users/{id}:
+ * /api/products/{id}:
  *   get:
- *     summary: Get user by ID
+ *     summary: Get product by ID
  *     parameters:
  *       - in: path
  *         name: id
  *         schema:
  *           type: integer
  *         required: true
- *         description: User ID
+ *         description: Product ID
  *     responses:
  *       200:
- *         description: A user object
+ *         description: A product object
  */
-router.get("/users/:id", fetchUserById);
+router.get("/products/:id", fetchProductById);
 
 /**
  * @swagger
- * /api/users:
+ * /api/products:
  *   post:
- *     summary: Create a new user
+ *     summary: Create a new product
  *     requestBody:
  *       required: true
  *       content:
@@ -46,28 +46,30 @@ router.get("/users/:id", fetchUserById);
  *             properties:
  *               name:
  *                 type: string
- *               email:
+ *               description:
  *                 type: string
- *               password:
- *                 type: string
+ *               price:
+ *                 type: number
+ *               stock:
+ *                 type: integer
  *     responses:
  *       201:
- *         description: User created
+ *         description: Product created
  */
-router.post("/users", addUser);
+router.post("/products", addProduct);
 
 /**
  * @swagger
- * /api/users/{id}:
+ * /api/products/{id}:
  *   put:
- *     summary: Update user by ID
+ *     summary: Update product by ID
  *     parameters:
  *       - in: path
  *         name: id
  *         schema:
  *           type: integer
  *         required: true
- *         description: User ID
+ *         description: Product ID
  *     requestBody:
  *       required: true
  *       content:
@@ -77,32 +79,34 @@ router.post("/users", addUser);
  *             properties:
  *               name:
  *                 type: string
- *               email:
+ *               description:
  *                 type: string
- *               password:
- *                 type: string
+ *               price:
+ *                 type: number
+ *               stock:
+ *                 type: integer
  *     responses:
  *       200:
- *         description: User updated
+ *         description: Product updated
  */
-router.put("/users/:id", updateUserById);
+router.put("/products/:id", updateProductDetails);
 
 /**
  * @swagger
- * /api/users/{id}:
+ * /api/products/{id}:
  *   delete:
- *     summary: Delete user by ID
+ *     summary: Delete product by ID
  *     parameters:
  *       - in: path
  *         name: id
  *         schema:
  *           type: integer
  *         required: true
- *         description: User ID
+ *         description: Product ID
  *     responses:
  *       200:
- *         description: User deleted
+ *         description: Product deleted
  */
-router.delete("/users/:id", deleteUserById);
+router.delete("/products/:id", removeProduct);
 
 export default router;

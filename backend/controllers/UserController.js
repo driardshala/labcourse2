@@ -1,4 +1,4 @@
-import { getAllUsers, getUserById, createUser } from "../models/UserModel.js";
+import { getAllUsers, getUserById, createUser, updateUser, deleteUser } from "../models/UserModel.js";
 
 // GET /api/users
 export const fetchUsers = async (req, res) => {
@@ -29,5 +29,28 @@ export const addUser = async (req, res) => {
     res.status(201).json({ message: "User created", userId: result.insertId });
   } catch (err) {
     res.status(500).json({ message: "Error creating user", error: err.message });
+  }
+};
+
+// PUT /api/users/:id (Update user by ID)
+export const updateUserById = async (req, res) => {
+  const { name, email, password } = req.body;
+  try {
+    const result = await updateUser(req.params.id, name, email, password);
+    if (result.affectedRows === 0) return res.status(404).json({ message: "User not found" });
+    res.json({ message: "User updated" });
+  } catch (err) {
+    res.status(500).json({ message: "Error updating user", error: err.message });
+  }
+};
+
+// DELETE /api/users/:id (Delete user by ID)
+export const deleteUserById = async (req, res) => {
+  try {
+    const result = await deleteUser(req.params.id);
+    if (result.affectedRows === 0) return res.status(404).json({ message: "User not found" });
+    res.json({ message: "User deleted" });
+  } catch (err) {
+    res.status(500).json({ message: "Error deleting user", error: err.message });
   }
 };
