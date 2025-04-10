@@ -6,9 +6,9 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "E-commerce API",
+      title: "Hazrolli BAU Market API",
       version: "1.0.0",
-      description: "API for managing users, products, and orders in an e-commerce app",
+      description: "API for managing users, products, and orders in the Hazrolli BAU Market",
     },
     servers: [
       {
