@@ -1,5 +1,6 @@
 import express from "express";
 import { fetchUsers, fetchUserById, addUser, updateUserById, deleteUserById } from "../controllers/UserController.js";
+import { loginUser } from "../controllers/AuthController.js";
 
 const router = express.Router();
 
@@ -104,5 +105,8 @@ router.put("/users/:id", updateUserById);
  *         description: User deleted
  */
 router.delete("/users/:id", deleteUserById);
+
+router.post("/login", loginUser);
+
 
 export default router;

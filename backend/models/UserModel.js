@@ -35,3 +35,9 @@ export const deleteUser = async (id) => {
   const [result] = await mysqlPool.execute("DELETE FROM users WHERE id = ?", [id]);
   return result;
 };
+
+
+export const getUserByEmail = async (email) => {
+  const [rows] = await pool.execute("SELECT * FROM users WHERE email = ?", [email]);
+  return rows[0];
+};

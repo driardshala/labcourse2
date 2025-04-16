@@ -6,6 +6,7 @@ import { swaggerUi, swaggerSpec } from "./config/swagger.js";
 import userRoutes from "./routes/UserRoutes.js";
 import productRoutes from "./routes/ProductRoutes.js"
 
+
 // Load environment variables
 dotenv.config();
 

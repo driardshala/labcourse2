@@ -1,5 +1,6 @@
 import { getAllUsers, getUserById, createUser, updateUser, deleteUser } from "../models/UserModel.js";
 
+
 // GET /api/users
 export const fetchUsers = async (req, res) => {
   try {
