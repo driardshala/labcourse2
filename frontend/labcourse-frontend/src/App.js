@@ -1,16 +1,11 @@
+// src/App.js
 import React from 'react';
-import './App.css';
+import WelcomePage from './WelcomePage'; // Importo WelcomePage
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>Prove</h1>
-                <p>labcourse frontend</p>
-                <button onClick={() => alert('Click here')}>
-                    Click here
-                </button>
-            </header>
+            <WelcomePage />
         </div>
     );
 }

@@ -1,0 +1,33 @@
+/* src/WelcomePage.css */
+
+.welcome-page {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+    .welcome-page h1 {
+        font-size: 2.5em;
+        color: #0056b3;
+    }
+
+    .welcome-page p {
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .welcome-page button {
+        background-color: #61dafb;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+        .welcome-page button:hover {
+            background-color: #0056b3;
+        }

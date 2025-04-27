@@ -1,0 +1,23 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7f4f9;
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+
+    .homepage h1 {
+        font-size: 3em;
+        color: #0056b3;
+        margin-bottom: 20px;
+    }
+
+    .homepage p {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+        text-align:center;
+    }
