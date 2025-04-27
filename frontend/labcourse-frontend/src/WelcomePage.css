@@ -1,33 +1,65 @@
 /* src/WelcomePage.css */
 
+/* Container për të mbështjellë përmbajtjen */
 .welcome-page {
+
     text-align: center;
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
     padding: 20px;
     min-height: 100vh;
+    /* Imazhi si background */
+    background-image: url('https://st.hzcdn.com/fimgs/25a13acc008877dc_0863-w1024-h698-b1-p0--.jpg'); /* Vendos URL-në e imazhit tuaj */
+    background-size: cover; /* Siguron që imazhi të mbulojë të gjithë ekranin */
+    background-position: center; /* Pozita e imazhit */
+    position: absolute; /* E vendosim në pozitat absolute për të mbuluar gjithë ekranin */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Sigurohemi që përmbajtja të jetë mbi imazh */
+    justify-content: center;
+    align-items: center;
 }
 
-    .welcome-page h1 {
-        font-size: 2.5em;
-        color: #0056b3;
-    }
+/* Përmbajtja që shfaqet mbi imazhin */
+.welcome-page-content {
+    position: relative;
+    z-index: 1; /* Siguron që përmbajtja të jetë mbi imazhin */
+}
 
-    .welcome-page p {
-        font-size: 1.2em;
-        color: #555;
-    }
+/* E tjera stilet */
+.welcome-page h1 {
+    font-size: 3em;
+    color: mintcream;
+    font-size: 3em;
+    color: mintcream;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 100px; /* Shtoni hapësirë nga lartë për të sjellë titullin më poshtë */
+}
 
-    .welcome-page button {
-        background-color: #61dafb;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.2em;
-        cursor: pointer;
-        margin-top: 20px;
-    }
 
-        .welcome-page button:hover {
-            background-color: #0056b3;
-        }
+
+.welcome-page p {
+    font-size: 2em;
+    color: mintcream;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Hije për tekstin */
+    margin-bottom: 10px;
+
+}
+
+.welcome-page button {
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+    .welcome-page button:hover {
+        background-color: #0056b3;
+    }
