@@ -1,15 +1,18 @@
-// src/HomePage.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './HomePage.css';
+import Header from './Header';  // Importohet Header-i
 
 function HomePage() {
     return (
         <div className="home-page">
+            <Header />  {/* Përdorim Header-in këtu */}
             <h1>Welcome to the Home Page!</h1>
-            <p>This is the main content of the application.</p>
-            <Link to="/">
-                <button>Back to Welcome Page</button>
-            </Link>
+            <p>This is where your content goes.</p>
+
+            {/* Footer-i është i pozicionuar në fund të faqes */}
+            <footer className="footer">
+                <p>&copy; 2025 Hazrolli Group. All rights reserved.</p>
+            </footer>
         </div>
     );
 }

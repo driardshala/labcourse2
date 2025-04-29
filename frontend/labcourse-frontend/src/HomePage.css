@@ -1,23 +1,25 @@
-.homepage {
+/* HomePage.css */
+
+.home-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #e7f4f9;
-    color: blue;
-    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Siguron që faqja të mbushë tërë lartësinë e ekranit */
 }
 
-    .homepage h1 {
-        font-size: 3em;
-        color: #0056b3;
-        margin-bottom: 20px;
+    .home-page > .footer {
+        margin-top: auto; /* Kjo i jep mundësinë footer-it të pozicionohet në fund */
     }
 
-    .homepage p {
-        font-size: 1.2em;
-        color: #555;
-        margin-bottom: 30px;
-        text-align:center;
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(116, 125, 143);
+    padding: 20px 0;
+    font-palette: 'Times New Roman';
+}
+
+    .footer p {
+        margin: 0;
+        font-size: 14px;
+        color: #fff;
     }
